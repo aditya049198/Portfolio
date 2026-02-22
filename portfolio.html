@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aditya Singh | Portfolio</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+
+/* ============ ROOT ============ */
+:root {
+  --black:#000;
+  --card:#0d0d0d;
+  --accent:#00fff0;
+  --accent2:#ff2d78;
+  --white:#fff;
+  --muted:#666;
+  --border:rgba(0,255,240,0.2);
+  --display:'Syne',sans-serif;
+  --mono:'Space Mono',monospace;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:var(--mono);
+  overflow-x:hidden;
+}
+
+/* ============ NAV ============ */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.9);
+  z-index:100;
+}
+
+.logo{
+  font-family:var(--display);
+  font-size:1.5rem;
+  color:var(--accent);
+  text-decoration:none;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:0.8rem;
+}
+
+nav a:hover{
+  color:var(--accent);
+}
+
+/* ============ HERO ============ */
+.hero{
+  min-height:100vh;
+  padding:140px 60px 60px;
+  display:flex;
+  align-items:center;
+}
+
+.hero img{
+  width:130px;
+  border-radius:50%;
+  border:3px solid var(--accent);
+  margin-bottom:25px;
+}
+
+.hero h1{
+  font-family:var(--display);
+  font-size:4rem;
+  margin-bottom:20px;
+}
+
+.hero h1 span{
+  color:var(--accent);
+}
+
+.hero p{
+  max-width:500px;
+  line-height:1.7;
+  color:var(--muted);
+}
+
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  gap:15px;
+}
+
+.btn{
+  padding:12px 28px;
+  border:1px solid var(--accent);
+  color:var(--accent);
+  text-decoration:none;
+  font-size:0.7rem;
+}
+
+.btn.primary{
+  background:var(--accent);
+  color:black;
+}
+
+/* ============ SECTION ============ */
+section{
+  padding:100px 60px;
+  border-top:1px solid var(--border);
+}
+
+.title{
+  font-family:var(--display);
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+/* ============ ABOUT ============ */
+.about p{
+  max-width:600px;
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* ============ SKILLS ============ */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  margin-top:30px;
+}
+
+.skill{
+  background:var(--card);
+  padding:20px;
+  text-align:center;
+  border:1px solid var(--border);
+}
+
+/* ============ PROJECTS ============ */
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.project{
+  background:var(--card);
+  padding:30px;
+  border:1px solid var(--border);
+}
+
+.project h3{
+  margin-bottom:10px;
+}
+
+/* ============ CONTACT ============ */
+.contact a{
+  color:var(--accent);
+  text-decoration:none;
+}
+
+/* ============ FOOTER ============ */
+footer{
+  padding:30px;
+  text-align:center;
+  color:var(--muted);
+  border-top:1px solid var(--border);
+}
+
+/* ============ MOBILE ============ */
+@media(max-width:768px){
+
+  nav{
+    padding:15px 25px;
+  }
+
+  .hero{
+    padding:120px 25px 60px;
+  }
+
+  section{
+    padding:70px 25px;
+  }
+
+  .hero h1{
+    font-size:3rem;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">A.S</a>
+
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <div>
+
+    <img src="profile.jpg" alt="Aditya Singh">
+
+    <h1>Hello, I'm <span>Aditya</span></h1>
+
+    <p>
+      I’m a passionate web developer creating modern, fast, and user-friendly websites.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#projects" class="btn primary">View Work</a>
+      <a href="#contact" class="btn">Contact</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="about">
+
+  <h2 class="title">About Me</h2>
+
+  <p>
+    I'm a web developer who loves building clean and scalable digital products.
+    I enjoy learning new technologies and solving real-world problems.
+  </p>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+
+  <h2 class="title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="skill">JavaScript</div>
+    <div class="skill">Python</div>
+    <div class="skill">HTML & CSS</div>
+    <div class="skill">Node.js</div>
+    <div class="skill">Git & GitHub</div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+
+  <h2 class="title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project">
+      <h3>Project Alpha</h3>
+      <p>Full-stack web app with authentication and dashboard.</p>
+    </div>
+
+    <div class="project">
+      <h3>Project Beta</h3>
+      <p>AI automation tool using Python & FastAPI.</p>
+    </div>
+
+    <div class="project">
+      <h3>Project Gamma</h3>
+      <p>E-commerce platform with payment gateway.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+  <h2 class="title">Contact</h2>
+
+  <p>Email: <a href="mailto:aditya@email.com">aditya@email.com</a></p>
+  <p>Phone: +91 9817266521</p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+  © 2025 Aditya Singh
+
+</footer>
+
+</body>
+</html>
