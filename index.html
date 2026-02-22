@@ -81,9 +81,11 @@ nav a:hover{
   align-items:center;
 }
 
-.hero img{
-  width:130px;
-  border-radius:50%;
+.profile-pic{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:10px;
   border:3px solid var(--accent);
   margin-bottom:25px;
 }
@@ -137,9 +139,10 @@ section{
 
 /* ============ ABOUT ============ */
 .about p{
-  max-width:600px;
+  max-width:650px;
   color:var(--muted);
   line-height:1.8;
+  margin-bottom:15px;
 }
 
 /* ============ SKILLS ============ */
@@ -173,12 +176,34 @@ section{
 
 .project h3{
   margin-bottom:10px;
+  color:var(--accent);
 }
 
 /* ============ CONTACT ============ */
-.contact a{
+
+.contact-grid{
+  margin-top:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.contact-box{
+  background:var(--card);
+  padding:25px;
+  border:1px solid var(--border);
+  text-align:center;
+}
+
+.contact-box h4{
   color:var(--accent);
-  text-decoration:none;
+  margin-bottom:10px;
+  font-family:var(--display);
+}
+
+.contact-box p{
+  color:var(--muted);
+  font-size:0.85rem;
 }
 
 /* ============ FOOTER ============ */
@@ -232,9 +257,9 @@ footer{
 
   <div>
 
-    <img src="profile.jpg" alt="Aditya Singh">
+    <img src="profile.jpg" alt="Aditya Singh" class="profile-pic">
 
-    <h1>Hello, I'm <span>Aditya</span></h1>
+    <h1>Hello, I'm <span>Aditya Singh</span></h1>
 
     <p>
       I’m a passionate web developer creating modern, fast, and user-friendly websites.
@@ -258,8 +283,21 @@ footer{
   <h2 class="title">About Me</h2>
 
   <p>
-    I'm a web developer who loves building clean and scalable digital products.
-    I enjoy learning new technologies and solving real-world problems.
+    I am a passionate and motivated web developer with strong interest in
+    building modern, responsive, and user-friendly websites.
+    I enjoy transforming ideas into real digital products using clean
+    and efficient code.
+  </p>
+
+  <p>
+    I continuously work on improving my technical skills in JavaScript,
+    Python, and backend technologies. I believe in learning by building
+    real projects and solving practical problems.
+  </p>
+
+  <p>
+    My goal is to grow as a professional software developer and contribute
+    to impactful projects in the tech industry.
   </p>
 
 </section>
@@ -291,17 +329,17 @@ footer{
   <div class="projects-grid">
 
     <div class="project">
-      <h3>Project Alpha</h3>
+      <h3>Project 1</h3>
       <p>Full-stack web app with authentication and dashboard.</p>
     </div>
 
     <div class="project">
-      <h3>Project Beta</h3>
+      <h3>Project 2</h3>
       <p>AI automation tool using Python & FastAPI.</p>
     </div>
 
     <div class="project">
-      <h3>Project Gamma</h3>
+      <h3>Project 3</h3>
       <p>E-commerce platform with payment gateway.</p>
     </div>
 
@@ -313,19 +351,38 @@ footer{
 <!-- CONTACT -->
 <section id="contact" class="contact">
 
-  <h2 class="title">Contact</h2>
+  <h2 class="title">Contact Me</h2>
 
-  <p>Email: <a href="mailto:aditya@email.com">aditya@email.com</a></p>
-  <p>Phone: +91 9817266521</p>
+  <div class="contact-grid">
+
+    <div class="contact-box">
+      <h4>Email</h4>
+      <p>aditya@email.com</p>
+    </div>
+
+    <div class="contact-box">
+      <h4>Instagram</h4>
+      <p>@your_instagram</p>
+    </div>
+
+    <div class="contact-box">
+      <h4>GitHub</h4>
+      <p>github.com/yourusername</p>
+    </div>
+
+    <div class="contact-box">
+      <h4>LinkedIn</h4>
+      <p>linkedin.com/in/yourusername</p>
+    </div>
+
+  </div>
 
 </section>
 
 
 <!-- FOOTER -->
 <footer>
-
   © 2025 Aditya Singh
-
 </footer>
 
 </body>
